@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --border: 1px solid red;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'PT Sans', sans-serif;
+   font-size: 18px;
+   padding: 0 40px;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+ .visually-hidden {
+   display: none;
+}
+
+.nav-list a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.nav__icons--link {
+  padding: 15px 9px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+  background: #756257;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.header__background {
+  background: #510D0E url("/src/images/index-images/index-background.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 51px;
+  padding-bottom: 82px;
+}
+
+.page-section__title{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.page-section__subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #333333;
+}
+
+.main__content {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+}
+
+.reason {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #fff;
+  background-color: #83B3D3   ;
+}
+
+.reason__title, .advantages__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages__title {
+  color: #000;
+}
+
+.reason-no-color {
+  background-color: #FFF;
+  color: #333333;
+}
+
+.reason-no-color h3 {
+  color: #000;
+}
+
+.search {
+  padding-top: 156px;
+  padding-bottom: 108px;
+  text-align: center;
+}
+
+.search__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search__subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 29px;
+  margin-bottom: 56px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #333333;
+}
+
+.search-hotel-btn {
+  width: 575px;
+  padding: 15px;
+  background: #756257;
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+
+.subscribe {
+  padding: 94px;
+  background: #0C2594 url("/src/images/index-images/background-subscribe.jpg") no-repeat;
+}
+
+
+
+
+
