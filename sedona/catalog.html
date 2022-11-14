@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/normalize.css">
-  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
   <title>Sedona-Hotels</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <header class="header">
       <div class="container">
         <nav class="nav">
-           <a href="index.html"> <img src="" alt="logo" class="nav-logo"> </a>
+           <a href="index.html"> <img src="src/images/index-images/logo.svg" alt="logo" class="nav-logo" width="139" height="70"> </a>
            <ul class="nav-list">
               <li class="nav-list__item">
                 <a href="index.html">Главная</a>
@@ -26,34 +26,34 @@
               </li>
           </ul>
           <div class="nav__icons">
-            <img src="/src/images/index-images/search.svg" alt="search" class="nav__icons--icon">
-            <img src="/src/images/index-images/favorite.svg" alt="favorite" class="nav__icons--icon">
-            <a href="#" class="nav__icons--link">Хочу сюда!</a>
+            <img src="src/images/index-images/search.svg" alt="search" class="nav__icons--search" width="18" height="18">
+            <img src="src/images/index-images/favorite.svg" alt="favorite" class="nav__icons--favorite" width="18" height="18">
+            <a href="#" class="nav__icons--link link">Хочу сюда!</a>
           </div> <!-- /nav__icons -->
         </nav>
       </div> <!-- /container -->
 
         <div class="container">
-          <section class="catalog__filter">
+          <section class="catalog-filter">
             <h1 class="main-title">Гостиницы Седоны</h1>
             <div class="crumbs">
-              <a href="/index.html"><img src="/src/images/catalog-images/crumbs-home.sv"  class="crumbs__home" alt="Назад на главную"></a>
-              <img src="/src/images/catalog-images/crumbs-arrow.sv" class="crubms__arrow" alt="arrow" >
+              <a href="/index.html"><img src="src/images/catalog-images/crumbs-home.svg"  class="crumbs__home" alt="Назад на главную"></a>
+              <img src="src/images/catalog-images/crumbs-arrow.svg" class="crumbs__arrow" alt="arrow" >
               <a href="catalog.html" class="crumbs__current-page">Гостиницы</a>
             </div> <!-- /crumbs -->
             <h2 class="visually-hidden">Фильтр списка гостиниц</h2>
             <form method="get" action="https://echo.htmlacademy.ru/" class="header-form">
               <fieldset class="header-form__infrastructure">
                 <legend class="infrastructure-title">Инфраструктура:</legend>
-                  <input type="checkbox" checked name="swimmingpool">Бассейн
-                  <input type="checkbox" checked name="parking">Парковка
-                  <input type="checkbox" name="wi-fi">Wi-Fi
+                 <label> <input type="checkbox" checked name="swimmingpool">Бассейн</label>
+                 <label> <input type="checkbox" checked name="parking" class="parking">Парковка </label>
+                 <label> <input type="checkbox" name="wi-fi">Wi-Fi </label>
               </fieldset> <!-- /header-form__infrastructure -->
               <fieldset class="header-form__type-hotels">
                 <legend class="type-hotels__title">Тип жилья:</legend>
-                  <input type="radio" checked name="type-hotels" value="hotel">Гостиница
-                  <input type="radio" name="type-hotels" value="motel">Мотель
-                  <input type="radio" name="type-hotels" value="appartaments">Апартаменты
+                <label> <input type="radio" checked name="type-hotels" value="hotel">Гостиница </label>
+                 <label> <input type="radio" name="type-hotels" value="motel">Мотель </label>
+                <label>  <input type="radio" name="type-hotels" value="appartaments">Апартаменты</label>
               </fieldset> <!-- /header-form__type-hotels -->
               <fieldset class="header-form__price">
                 <legend class="header-form__items-title">Стоимость, ₽:</legend>
@@ -73,7 +73,7 @@
 
       <main class="catalog-main">
         <div class="container">
-          <div class="catalog-main__header">
+          <section class="catalog-main__header">
             <h2 class="visually-hidden">Результаты поиска</h2>
             <p class="catalog-main__search">Найдено гостиниц: <span class="catalog-main__search-quantity">38</span> </p>
             <h3 class="visually-hidden">Сортировка и отображение</h3>
@@ -83,88 +83,131 @@
               <option value="popular" class="list-sort-item">Сначала популярные</option>
             </select>
 
-            <ul class="main__header__view-items">
-              <li class="view-items__item">
-                <button class="sort-button">Показать карточками</button>
+ <ul class="main__header__view-items">
+  <li class="view-items__item">
+   <span class="sort-button">
+    <img src="src/images/catalog-images/sort-1.svg" alt="" width="16" height="14" class="sort-image">
+    </span>
+  </li>
+  <li class="view-items__item">
+  <span class="sort-button">
+    <img src="src/images/catalog-images/sort-slider.svg" alt="" width="16" height="14" class="sort-image">
+  </span>
               </li>
-              <li class="view-items__item">
-                <button class="sort-button">Показать слайдом</button>
-              </li>
-              <li class="view-items__item">
-                <button class="sort-button">Показать списком</button>
-              </li>
+<li class="view-items__item">
+  <span class="sort-button">
+    <img src="src/images/catalog-images/sort-list.svg" alt="" width="16" height="14" class="sort-image">
+  </span>
+</li>
             </ul>
-          </div> <!-- /catalog-main__header -->
+          </section> <!-- /catalog-main__header -->
 
           <section class="catalog-content">
             <h3 class="visually-hidden">Список гостиниц</h3>
-            <div class="content_ item">
-              <img src="" alt="" class="item_ photo-hotel">
+              <div class="hotels-cards">
+                <div class="cards_item">
+                  <img src="src/content-images/photo-1.png" alt="" class="item_photo-hotel">
+                  <a href=""> <h4 class="item_name-hotel">Amara Resort & Spa</h4> </a>
+
+                  <div class="type-and-price-wrapper">
+                    <span class="item_type-hotel">Гостиница</span>
+                    <span class="item_min-price">от 4000 P</span>
+                  </div>
+
+                  <div class="cards-button-wrapper">
+                    <a href="" class="item_about-link">ПОДРОБНЕЕ</a>
+                    <button class="item_favorites-link">В ИЗБРАННОЕ</button>
+                  </div>
+     <div class="rating-wrapper">
+              <span class="rating-stars">4 звезды</span>
+  <div class="item_rating">РЕЙТИНГ: <span class="item_rating-number">8,5</span> </div>
+      </div>
+            </div>  <!-- /cards_ item -->
+
+            <div class="cards_item">
+              <img src="src/content-images/photo-1.png" alt="" class="item_photo-hotel">
               <a href=""> <h4 class="item_name-hotel">Amara Resort & Spa</h4> </a>
-              <p class="item_ type-hotel">Гостиница</p>
-              <p class="item_min-price">от 4000 P</p>
-              <a href="" class="item_about-link">ПОДРОБНЕЕ</a>
-              <a href="" class="item_ favorites-link">В ИЗБРАННОЕ</a>
-              <p class="visually-hidden">4 звезды</p>
-              <p class="item_rating">РЕЙТИНГ: <span class="item_rating-number">8,5</span> </p>
-            </div>  <!-- /content_ item -->
 
-            <div class="content_ item">
-              <img src="" alt="" class="item_ photo-hotel">
-              <a href=""> <h4 class="item_name-hotel">Desert Quail Inn</h4> </a>
-              <p class="item_ type-hotel">Гостиница</p>
-              <p class="item_min-price">от 3000 P</p>
-              <a href="" class="item_about-link">ПОДРОБНЕЕ</a>
-              <a href="" class="item_ favorites-link">В ИЗБРАННОЕ</a>
-              <p class="visually-hidden">3 звезды</p>
-              <p class="item_rating">РЕЙТИНГ: <span class="item_rating-number">8,9</span> </p>
-            </div>  <!-- /content_ item -->
+    <div class="type-and-price-wrapper">
+              <span class="item_type-hotel">Гостиница</span>
+              <span class="item_min-price">от 4000 P</span>
+    </div>
 
-            <div class="content_ item">
-              <img src="" alt="" class="item_ photo-hotel">
-              <a href=""> <h4 class="item_name-hotel">Villas at Poco Diablo</h4> </a>
-              <p class="item_ type-hotel">Гостиница</p>
-              <p class="item_min-price">от 2000 P</p>
+     <div class="cards-button-wrapper">
               <a href="" class="item_about-link">ПОДРОБНЕЕ</a>
-              <a href="" class="item_ favorites-link">В ИЗБРАННОЕ</a>
-              <p class="visually-hidden">2 звезды</p>
-              <p class="item_rating">РЕЙТИНГ: <span class="item_rating-number">9,2</span> </p>
-            </div>  <!-- /content_ item -->
+              <button class="item_favorites-link">В ИЗБРАННОЕ</button>
+     </div>
+     <div class="rating-wrapper">
+              <span class="rating-stars">4 звезды</span>
+  <div class="item_rating">РЕЙТИНГ: <span class="item_rating-number">8,5</span> </div>
+      </div>
+            </div>  <!-- /cards_ item -->
 
-            <div class="content_ item">
-              <img src="" alt="" class="item_ photo-hotel">
-              <a href=""> <h4 class="item_name-hotel">GreenTree Inn</h4> </a>
-              <p class="item_ type-hotel">Гостиница</p>
-              <p class="item_min-price">от 3000 P</p>
+             <div class="cards_item">
+              <img src="src/content-images/photo-1.png" alt="" class="item_photo-hotel">
+              <a href=""> <h4 class="item_name-hotel">Amara Resort & Spa</h4> </a>
+
+    <div class="type-and-price-wrapper">
+              <span class="item_type-hotel">Гостиница</span>
+              <span class="item_min-price">от 4000 P</span>
+    </div>
+
+     <div class="cards-button-wrapper">
               <a href="" class="item_about-link">ПОДРОБНЕЕ</a>
-              <a href="" class="item_ favorites-link">В ИЗБРАННОЕ</a>
-              <p class="visually-hidden">2 звезды</p>
-              <p class="item_rating">РЕЙТИНГ: <span class="item_rating-number">9,2</span> </p>
-            </div>  <!-- /content_ item -->
+              <button class="item_favorites-link">В ИЗБРАННОЕ</button>
+     </div>
+     <div class="rating-wrapper">
+              <span class="rating-stars">4 звезды</span>
+  <div class="item_rating">РЕЙТИНГ: <span class="item_rating-number">8,5</span> </div>
+      </div>
+            </div>  <!-- /cards_ item -->
+
+             <div class="cards_item">
+              <img src="src/content-images/photo-1.png" alt="" class="item_photo-hotel">
+              <a href=""> <h4 class="item_name-hotel">Amara Resort & Spa</h4> </a>
+
+    <div class="type-and-price-wrapper">
+              <span class="item_type-hotel">Гостиница</span>
+              <span class="item_min-price">от 4000 P</span>
+    </div>
+
+     <div class="cards-button-wrapper">
+              <a href="" class="item_about-link">ПОДРОБНЕЕ</a>
+              <button class="item_favorites-link" id="favorite-button">В ИЗБРАННОЕ</button>
+     </div>
+     <div class="rating-wrapper">
+              <span class="rating-stars">4 звезды</span>
+  <div class="item_rating">РЕЙТИНГ: <span class="item_rating-number">8,5</span> </div>
+      </div>
+            </div>  <!-- /cards_ item -->
+            </div>
+
+     <hr>
 
             <button class="catalog-content__btn">Загрузить ещё</button>
+      <hr>
             <div class="choose-pages-wrapper">
               <h3 class="visually-hidden">Список страниц</h3>
-              <ul class="choose-pages__list">
+              <ol class="choose-pages__list">
                 <li class="choose-pages_list-item">
-                  <a href="#" class="pages-list-link">1</a>
+                  <button class="pages-list-link">1</button>
                 </li>
                 <li class="choose-pages_list-item">
-                  <a href="#" class="pages-list-link">2</a>
+                  <button class="pages-list-link">2</button>
                 </li>
                 <li class="choose-pages_list-item">
-                  <a href="#" class="pages-list-link">3</a>
+                  <button class="pages-list-link">3</button>
                 </li>
                 <li class="choose-pages_list-item">
-                  <a href="#" class="pages-list-link">4</a>
+                  <button class="pages-list-link">4</button>
                 </li>
                 <li class="choose-pages_list-item">
-                  <a href="#" class="pages-list-link">...</a>
+                  <button class="pages-list-link">...</button>
                 </li>
                 <li class="choose-pages_list-item">
-                  <a href="#" class="pages-list-link">10</a>
+                  <button class="pages-list-link">10</button>
                 </li>
-              </ul>
+              </ol>
               <p class="choose-pages__quantity">
                 <label>Гостиниц на странице:</label>
                 <select name="quantity-page" id="" class="quantity__list">
@@ -180,25 +223,26 @@
       </main>
 
        <div class="container">
-          <section class="page-section subscribe">
+          <section class="catalog-subscribe">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
             <p class="subscribe__title">Подпишитесь на рассылку</p>
-            <p class="mailing__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="mailing__subtitle">Только полезная информация и никакого спама, <br>честное бойскаутское</p>
             <form method="get" action="https://echo.htmlacademy.ru/" class="subscribe__form">
               <input type="email" class="subscribe-form__mail">
               <input type="submit" class="subscribe-form__submit" value="Подписаться">
             </form>
           </section>
 
-        <footer class="catalog-footer">
+        <footer class="footer">
           <div class="footer__icons">
-            <a href="twitter.com" target="_blank"> <img src="/src/images/index-images/twitter.svg" alt="twitter" class="footer__icons--item"></a>
-            <a href="facebook.com" target="_blank"> <img src="/src/images/index-images/facebook.svg" alt="facebook" class="footer__icons--item"></a>
-            <a href="youtube.com" target="_blank"> <img src="/src/images/index-images/youtube.svg" alt="youtube" class="footer__icons--item"></a>
+            <a href="twitter.com" target="_blank"> <img src="src/images/index-images/twitter.svg" alt="twitter" class="footer__icons--twitter"></a>
+            <a href="facebook.com" target="_blank"> <img src="src/images/index-images/facebook.svg" alt="facebook" class="footer__icons--facebook"></a>
+            <a href="youtube.com" target="_blank"> <img src="src/images/index-images/youtube.svg" alt="youtube" class="footer__icons--youtube"></a>
           </div> <!-- / footer__icons -->
           <a href="tel:+78128121212" class="footer__tel"> +7 (812) 812-12-12</a>
-          <a href="htmlacademy.ru"><img src="/src/images/index-images/htmlacademy.svg" alt="htmlacademy"></a>
+          <a href="htmlacademy.ru"><img src="src/images/index-images/htmlacademy.svg" alt="htmlacademy"></a>
         </footer>
       </div> <!-- /container -->
 </body>
+<script src="script.js"></script>
 </html>

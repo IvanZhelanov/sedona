@@ -220,7 +220,10 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-
+p {
+  padding: 0;
+  margin: 0;
+}
 pre {
   overflow: auto;
 }
